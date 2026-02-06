@@ -1,0 +1,355 @@
+# 🧠 EXERCÍCIOS DE VIDA REAL — ARRAYS EM C
+
+## 1️⃣ Controle de notas de alunos (básico, obrigatório)
+
+Uma turma tem **10 alunos**.
+
+Crie um programa que:
+
+* armazene as notas num array
+* calcule:
+
+  * média da turma
+  * maior nota
+  * menor nota
+
+📌 Conceitos treinados:
+
+* array
+* loop
+* acesso por índice
+
+---
+
+## 2️⃣ Sistema de caixa (supermercado simples)
+
+Um caixa registra **5 preços** de produtos.
+
+O programa deve:
+
+* armazenar os preços
+* mostrar:
+
+  * total da compra
+  * preço médio
+  * quantos produtos custam mais de 10€
+
+📌 Vida real total — isso é código de sistema simples.
+
+---
+
+## 3️⃣ Sensor de temperatura (muito real)
+
+Um sensor registra a temperatura a cada hora (24 horas).
+
+Crie um programa que:
+
+* guarde as 24 leituras
+* diga:
+
+  * temperatura máxima
+  * temperatura mínima
+  * quantas vezes a temperatura foi maior que 30°C
+
+📌 Usado em sistemas embarcados.
+
+---
+
+## 4️⃣ Controle de estoque (empresa pequena)
+
+Uma loja tem **8 produtos** e guarda apenas a quantidade em estoque.
+
+O programa deve:
+
+* armazenar as quantidades
+* permitir:
+
+  * vender um produto (reduz quantidade)
+  * repor produto (aumenta quantidade)
+* mostrar o estoque final
+
+📌 Treina acesso direto ao array.
+
+---
+
+## 5️⃣ Análise de salários (RH)
+
+Uma empresa tem **12 funcionários**.
+
+Crie um programa que:
+
+* armazene os salários
+* calcule:
+
+  * salário médio
+  * quantos ganham acima da média
+  * maior e menor salário
+
+📌 Isso cai muito em entrevistas.
+
+---
+
+## 6️⃣ Validação de dados (muito usado)
+
+Receba **6 idades**.
+
+O programa deve:
+
+* contar:
+
+  * quantas são menores de idade
+  * quantas são adultas
+  * quantas são idosas (≥ 65)
+
+📌 Treina lógica + array.
+
+---
+
+## 7️⃣ Simulação de votação (clássico real)
+
+Uma votação com **3 candidatos**.
+
+* Cada voto é um número (1, 2 ou 3)
+* Registre **20 votos** num array
+* Conte quantos votos cada candidato recebeu
+
+📌 Sistemas reais simples fazem isso.
+
+---
+
+## 8️⃣ Detecção de erro (industrial)
+
+Um sensor envia **15 valores**.
+
+O programa deve:
+
+* armazenar os valores
+* detectar:
+
+  * valores negativos
+  * valores acima de 100
+* contar quantos erros ocorreram
+
+📌 Muito comum em indústria.
+
+---
+
+## 9️⃣ Busca simples (fundamental)
+
+Receba **10 números**.
+
+* peça um número ao usuário
+* diga se ele existe no array ou não
+
+📌 Base de qualquer sistema.
+
+---
+
+## 🔟 Compactação de dados (nível bom)
+
+Receba **10 números inteiros**.
+
+Crie um novo array que:
+
+* copie apenas os números **positivos**
+* mostre o novo array
+
+📌 Isso é lógica de filtro (muito usada).
+
+---
+///////////////////////////////////////////////
+//////////////////////////////////////////////
+///////////////////////////////////////////
+Tenho 😄
+E agora vamos entrar nos **exercícios que realmente fazem alguém ficar forte em C**, do tipo que **separa curioso de programador de verdade**.
+
+Vou subir o nível **sem usar ponteiros avançados nem `malloc` ainda** — só **arrays + lógica pesada**, exatamente como cai em **provas difíceis** e **entrevistas**.
+
+---
+
+# 🔥 EXERCÍCIOS DIFÍCEIS — ARRAYS EM C
+
+## 🧠 1️⃣ Detecção de sequência (nível entrevista)
+
+Receba **20 números inteiros**.
+
+O programa deve:
+
+* encontrar a **maior sequência crescente consecutiva**
+* mostrar:
+
+  * o tamanho da sequência
+  * onde ela começa (índice)
+
+📌 Ex:
+
+```
+1 2 3 1 2 3 4 1
+→ maior sequência: 1 2 3 4 (tamanho 4)
+```
+
+---
+
+## 🧠 2️⃣ Rotação de array (muito usada)
+
+Receba **10 números** e um valor `k`.
+
+* Rotacione o array `k` posições para a direita.
+
+📌 Ex:
+
+```
+Array: 1 2 3 4 5
+k = 2
+Resultado: 4 5 1 2 3
+```
+
+---
+
+## 🧠 3️⃣ Remover duplicados SEM array auxiliar
+
+Receba **15 números**.
+
+* Remova valores duplicados
+* Ajuste o array
+* Mostre o novo tamanho
+
+❌ Não pode usar outro array
+❌ Não pode usar `sort`
+
+📌 Esse é pesado.
+
+---
+
+## 🧠 4️⃣ Subarray com maior soma (nível alto)
+
+Receba **12 números (positivos e negativos)**.
+
+* Encontre o subarray contínuo com **maior soma**
+* Mostre:
+
+  * soma
+  * início e fim
+
+📌 Algoritmo famoso (Kadane).
+
+---
+
+## 🧠 5️⃣ Interseção de arrays (nível empresa)
+
+Dois arrays:
+
+* A com 10 números
+
+* B com 8 números
+
+* Crie um terceiro array com **valores comuns**
+
+* Sem repetir valores
+
+📌 Sistema real de comparação de dados.
+
+---
+
+## 🧠 6️⃣ Frequência de elementos (difícil)
+
+Receba **20 números entre 0 e 9**.
+
+* Conte quantas vezes cada número aparece
+* Mostre assim:
+
+```
+0 → 3 vezes
+1 → 0 vezes
+2 → 5 vezes
+...
+```
+
+📌 Muito usado em análise de dados simples.
+
+---
+
+## 🧠 7️⃣ Compressão de array (nível alto)
+
+Receba **15 números**.
+
+* Converta para o formato:
+
+```
+[valor, quantidade]
+```
+
+📌 Ex:
+
+```
+1 1 1 2 2 3
+→ (1,3) (2,2) (3,1)
+```
+
+📌 Usado em compressão RLE.
+
+---
+
+## 🧠 8️⃣ Ordenação manual (sem biblioteca)
+
+Receba **10 números**.
+
+* Ordene o array
+* Mostre cada passo da ordenação
+
+📌 Bubble / Selection / Insertion
+
+---
+
+## 🧠 9️⃣ Detecção de padrão (difícil)
+
+Receba **20 números**.
+
+* Verifique se existe o padrão:
+
+```
+x, y, x
+```
+
+📌 Ex:
+
+```
+1 2 1 → padrão válido
+```
+
+📌 Isso aparece em testes lógicos.
+
+---
+
+## 🧠 🔟 Jogo da vida (simplificado)
+
+Receba uma matriz 5x5 (array 2D).
+
+* 0 = morto
+* 1 = vivo
+
+Aplique **uma geração** das regras do Jogo da Vida.
+
+📌 Isso é nível sério.
+
+---
+
+# 🎯 COMO TREINAR COMO UM PRO
+
+Para cada exercício:
+
+* pensa no índice
+* pensa nos limites
+* desenha o array no papel
+* escreve o código depois
+
+---
+
+## 👊 Próximo passo
+
+Diz-me **um número (1–10)**
+ou diz:
+
+> “Escolhe o mais difícil e me guia passo a passo”
+
+Eu vou contigo **linha por linha**, sem pular nada 💪
