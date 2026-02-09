@@ -7,23 +7,22 @@ int main(int argc, char const *argv[])
     queue.enqueue(2);
     queue.enqueue(6);
     queue.show();
-    // queue.dequeue();
-    // queue.dequeue();
     queue.dequeue();
     queue.dequeue();
     queue.dequeue();
+    queue.dequeue();
+    queue.dequeue();
     // queue.dequeue();
     // queue.dequeue();
-    queue.enqueue(3336);
+    // queue.enqueue(3336);
     // queue.dequeue();
     queue.show();
 
     std::cout << "\n \n ";
-    Node<int> *ua = queue.peek();
-    if (ua != nullptr)
+    int value = queue.peek();
+    if (value)
     {
-        std::cout << "encontrado: " << ua->getData();
-        delete ua;
+        std::cout << "encontrado: " << value;
     }
 
     return 0;

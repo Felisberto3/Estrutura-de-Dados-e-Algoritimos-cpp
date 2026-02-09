@@ -11,9 +11,10 @@ private:
 
 public:
     Queue();
+    ~Queue();
     void enqueue(T data);
     void dequeue();
-    Node<T> *peek();
+    T peek();
     void show();
 };
 
@@ -21,6 +22,15 @@ template <typename T>
 Queue<T>::Queue()
 {
     head = tail = nullptr;
+};
+
+template <typename T>
+Queue<T>::~Queue()
+{
+    while (head != nullptr)
+    {
+        dequeue();
+    }
 };
 
 template <typename T>
@@ -72,15 +82,15 @@ void Queue<T>::show()
 };
 
 template <typename T>
-Node<T> *Queue<T>::peek()
+T Queue<T>::peek()
 {
     if (head == nullptr)
     {
-        return nullptr;
+        throw std::runtime_error("Queue vazia");
     }
     else
     {
-        return head;
+        return head->getData();
     }
 };
 
