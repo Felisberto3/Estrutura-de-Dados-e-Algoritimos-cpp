@@ -7,48 +7,53 @@ template <typename T>
 class Queue
 {
 private:
-    Node<T> *head = nullptr;
+    Node<T> *head, *tail;
 
 public:
     Queue();
-    void insert(T data);
+    void enqueue(T data);
     void dequeue();
+    Node<T> *peek();
     void show();
 };
 
 template <typename T>
 Queue<T>::Queue()
 {
-    this->head = nullptr;
+    head = tail = nullptr;
 };
+
 template <typename T>
-void Queue<T>::insert(T data)
+void Queue<T>::enqueue(T data)
 {
-    this->head = new Node<T>(data, head);
-};
+    if (head == nullptr)
+    {
+        head = tail = new Node<T>(data);
+    }
+    else
+    {
+        tail->setNext(new Node<T>(data));
+        tail = tail->getNext();
+    }
+}
+
 template <typename T>
 void Queue<T>::dequeue()
 {
     if (head == nullptr)
-        return;
-
-    if (head->getNext() == nullptr)
     {
-        head = nullptr;
         return;
     }
 
-    Node<T> *curr = head;
-    Node<T> *nextCurr = this->head->getNext();
+    Node<T> *temp = head;
+    head = head->getNext();
 
-    while (nextCurr->getNext() != nullptr)
+    delete temp;
+
+    if (head == nullptr)
     {
-        curr = nextCurr;
-        nextCurr = nextCurr->getNext();
+        tail = nullptr;
     }
-
-    curr->setNext(nullptr);
-    delete nextCurr;
 };
 
 template <typename T>
@@ -62,7 +67,21 @@ void Queue<T>::show()
         std::cout << temp->getData() << " ";
         temp = temp->getNext();
     }
+
     std::cout << "]";
-}
+};
+
+template <typename T>
+Node<T> *Queue<T>::peek()
+{
+    if (head == nullptr)
+    {
+        return nullptr;
+    }
+    else
+    {
+        return head;
+    }
+};
 
 #endif
