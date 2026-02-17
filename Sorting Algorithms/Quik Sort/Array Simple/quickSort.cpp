@@ -11,7 +11,7 @@ int partition(int arr[], int left, int right)
 {
     int pivot = arr[right];
     int i = left - 1;
-    for (int j = left; j <= right; j++)
+    for (int j = left; j < right; j++)
     {
         if (arr[j] < pivot)
         {
@@ -45,9 +45,10 @@ int main(int argc, char const *argv[])
     // int arr[] = {7, 7, 7, 7, 7, 7};
     // int arr[] = {-3, 10, -1, 5, -8, 2, 0};
     // int arr[] = {8, 3, 1, 7, 0};
-    int arr[] = {42};
+    // int arr[] = {42};
     // int arr[] = {32, 5, 17, 8, 99, 1, 44, 12, 0, 73, 21, 6};
     // int arr[] = {9, 1};
+    int arr[] = {-3, 1, 5};
     int length = sizeof(arr) / sizeof(arr[0]);
 
     quickSort(arr, 0, length - 1);
@@ -57,7 +58,4 @@ int main(int argc, char const *argv[])
     }
 
     return 0;
-
-    int numero = 3;
-    double numero2 = 3.6;
 }
